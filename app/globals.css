@@ -2,26 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.nav-tab{
+    @apply bg-gray-900 w-1/5 h-[8rem]  space-y-2
+    shadow-lg shadow-primary border-2 border-orange-900 
+    flex flex-col rounded-lg text-white items-center justify-center 
+    cursor-pointer hover:bg-primary
+    transition ease-out duration-500 hover:scale-110;
 }
