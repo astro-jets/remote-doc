@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import HeartRate from "../components/HeartRate";
-import {FaHeartbeat,FaLungs, FaTint} from "react-icons/fa"
+import {FaHeart,FaLungs, FaTint} from "react-icons/fa"
 import { BsHandIndexFill } from "react-icons/bs";
 const Monitor = () => {
     const [initialDataHeartRate,setHr] = useState( [98, 97, 97, 98, 98, 97, 96, 97, 98, 99, 98, 97, 96, 96, 97, 98, 99, 98, 97, 97]); // Approximately 1 hour of data (1 data point per second)
@@ -56,7 +56,7 @@ const Monitor = () => {
                     <HeartRate vitalSign={"Heart Rate"} color={"#249124"}  initialData={initialDataHeartRate}/>
                     <div className="w-1/4 h-full rounded-2xl bg-gray-800 flex flex-col items-center justify-around">
                         <p className="text-2xl font-extra-bold text-white">Heart Rate</p>
-                        <FaHeartbeat size={80} className="text-green-700"/>
+                        <FaHeart size={80} className="text-green-700"/>
                         <p className="text-xl font-extra-bold text-white">128 <span className="text-green-700 text-lg">bpm</span></p>
                     </div>
                 </div>
