@@ -1,113 +1,4 @@
 "use client"
-// import { useEffect } from 'react';
-// import Chart from 'chart.js';
-
-// export default function HeartRate({name, color, id }) {
-//     useEffect(() => {
-//         var config = {
-//             type: 'line',
-//             data: {
-//                 labels: [
-//                     'January',
-//                     'February',
-//                     'March',
-//                     'April',
-//                     'May',
-//                     'June',
-//                     'July',
-//                 ],
-//                 datasets: [
-//                     {
-//                         label: name,
-//                         backgroundColor: color,
-//                         borderColor: color,
-//                         data: [65, 78, 66, 44, 56, 67, 75],
-//                         fill: false,
-//                     },
-//                 ],
-//             },
-//             options: {
-//                 maintainAspectRatio: false,
-//                 responsive: true,
-//                 title: {
-//                     display: false,
-//                     text: 'Sales Charts',
-//                     fontColor: '#ffffff',
-//                 },
-//                 legend: {
-//                     labels: {
-//                         fontColor: '#ffffff',
-//                     },
-//                     align: 'end',
-//                     position: 'bottom',
-//                 },
-//                 tooltips: {
-//                     mode: 'index',
-//                     intersect: false,
-//                 },
-//                 hover: {
-//                     mode: 'nearest',
-//                     intersect: true,
-//                 },
-//                 scales: {
-//                     xAxes: [
-//                         {
-//                             ticks: {
-//                                 fontColor: '#ffffff',
-//                             },
-//                             display: true,
-//                             scaleLabel: {
-//                                 display: false,
-//                                 labelString: 'Month',
-//                                 fontColor: '#ffffff',
-//                             },
-//                             gridLines: {
-//                                 display: false,
-//                                 borderDash: [2],
-//                                 borderDashOffset: [2],
-//                                 color: '#ffffff',
-//                                 zeroLineColor: 'rgba(0, 0, 0, 0)',
-//                                 zeroLineBorderDash: [2],
-//                                 zeroLineBorderDashOffset: [2],
-//                             },
-//                         },
-//                     ],
-//                     yAxes: [
-//                         {
-//                             ticks: {
-//                                 fontColor: '#ffffff',
-//                             },
-//                             display: true,
-//                             scaleLabel: {
-//                                 display: false,
-//                                 labelString: 'Value',
-//                                 fontColor: '#ffffff',
-//                             },
-//                             gridLines: {
-//                                 borderDash: [3],
-//                                 borderDashOffset: [3],
-//                                 drawBorder: false,
-//                                 color: '#ffffff',
-//                                 zeroLineColor: '#ffffff',
-//                                 zeroLineBorderDash: [2],
-//                                 zeroLineBorderDashOffset: [2],
-//                             },
-//                         },
-//                     ],
-//                 },
-//             },
-//         };
-//         var ctx = document.getElementById(id).getContext('2d');
-//         window.myLine = new Chart(ctx, config);
-//     }, []);
-
-//     return (
-
-//         <div className="h-full w-[70%]">
-//             <canvas id={id} className='bg-gray-800 text-#ffffff'></canvas>
-//         </div>
-//     );
-// }
 
 import React, { useEffect, useState } from "react";
 import Chart from "chart.js/auto";
@@ -136,7 +27,7 @@ export default function HeartRate({ vitalSign, color, initialData }) {
         maintainAspectRatio: false,
         responsive: true,
         animation: {
-          duration: 2950, // Adjust the duration as needed
+          duration: 9000, // Adjust the duration as needed
           easing: "linear", // Use a linear easing function for smoother animations
           onProgress: (animation) => {
             // Update the chart's data points in real-time

@@ -105,7 +105,7 @@ export default function ChartLine() {
                 },
             },
         };
-        var ctx = document.getElementById('line-chart').getContext('2d');
+        var ctx = document.getElementById('l-chart').getContext('2d');
         window.myLine = new Chart(ctx, config);
     }, []);
 
@@ -119,7 +119,7 @@ export default function ChartLine() {
             </CardHeader>
             <CardBody>
                 <div className="relative h-96">
-                    <canvas id="line-chart"></canvas>
+                    <canvas id="l-chart"></canvas>
                 </div>
             </CardBody>
         </Card>
